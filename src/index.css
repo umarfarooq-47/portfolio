@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-canvas: #060a14;
+    --bg-surface: #0b1120;
+    --bg-card: #0f172a;
+    --border-hairline: rgba(148, 163, 184, 0.14);
+    --accent-blue: #3b82f6;
+    --accent-cyan: #22d3ee;
+  }
+
+  html {
+    font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+    scroll-padding-top: 5rem;
+    background-color: #060a14;
+    color: #f1f5f9;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
+    font-family: "Outfit", system-ui, -apple-system, sans-serif;
+  }
+
+  .font-mono-tech {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* Custom subtle range slider for the interactive Time Zone Converter widget */
+input[type="range"].tz-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.2);
+  outline: none;
+}
+
+input[type="range"].tz-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #22d3ee;
+  border: 2px solid #060a14;
+  cursor: pointer;
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.2);
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type="range"].tz-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.12);
+}
+
+input[type="range"].tz-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #22d3ee;
+  border: 2px solid #060a14;
+  cursor: pointer;
+  box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
